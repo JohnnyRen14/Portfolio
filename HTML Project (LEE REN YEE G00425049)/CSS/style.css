@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  setting all color and size variables  */
+:root{
+	--color-light: #f5f7fa;
+	--color-dark: #171e23;
+	--color-orange: #ff7f0e;
+	--color-grey: #bdc3c7;
+	--color-red: #e11d48;
+	--color-purple: #4f46e5;
+	--size-2xs: 0.3rem;
+	--size-xs: 0.5rem;
+	--size-sm: 0.8rem;
+	--size-nm: 1rem;
+	--size-lg: 1.5rem;
+	--size-xl: 2rem;
+	--size-2xl: 3rem;
+	--size-3xl: 10rem;
+	--size-4xl: 20rem;
+}
+
+/* setting default margin and padding to 0 and color to light */
+*{
+	margin: 0;
+	padding: 0;
+	color: var(--color-light);
+	font-family: 'Fredericka the Great';
+}
+
+/* defining header 1 */ 
+h1{
+	color: var(--color-red);
+	font-size: var(--size-xl);
+}
+
+body{
+	background-color: var(--color-dark) ;
+}
+
+/* setting the left & right margin of the header */
+header{
+	margin-left: var(--size-4xl);
+	margin-right: var(--size-4xl);
+}
+
+#headerMenu ul{
+	display: flex; /* set the list to be horizontal   */
+	list-style: none; /*clear the dot of the list */
+	position: fixed; /* to fixed the navigation bar on top when scrolling the webpage */
+	top: 0;/* to position the navigation bar at the topmost of the webpage*/
+	background-color: var(--color-dark);
+}
+
+#headerMenu a{
+	color: var(--color-light) ;
+	text-decoration: none; /* to remove the underline */
+	display: block; /*to display the each part of navigation bar as a block*/
+	padding:var(--size-xs) var(--size-nm); /* decrease the top & bottom padding and increase left and right padding */
+	text-align: center; 
+	font-size: var(--size-nm);
+	font-weight: 800;/* bold the text */
+	transition: 0.5s; /* set the hover duration to 0.5s */
+}
+
+#headerMenu a:hover{
+	color: var(--color-dark); /* change the text color to dark when hover */
+	background-color: var(--color-grey); /* change the block of one of the navigation bar to grey when hover */
+	transform: translateY(5px); /* when hover the navigation block will move down 5px */
+}
+
+/* to set everything in the middle  */
+main{
+	margin-top: var(--size-3xl); 
+	margin-left:  var(--size-4xl); 
+	margin-right: var(--size-4xl);
+	margin-bottom: var(--size-2xl);
+}
+section{
+		margin-top: var(--size-2xl);
+}
+p{
+	font-size: var(--size-nm);
+}
+
+#hero_container{
+	text-align: center;
+}
+
+#hero_container li{
+	color: var(--color-purple); 
+	list-style: none;
+	font-weight: bold;
+}
+
+#hero_img{
+	border-radius: 100%; /* set the picture to be round */
+	width: var(--size-3xl);
+	height: var(--size-3xl);
+}
+
+#hero_title{
+	font-size: var(--size-2xl);
+}
+
+/*Increase spacing between paragraphs and title*/
+h2, #hero_title{
+	margin-bottom: var(--size-nm);
+} 
+.btn {
+	font-weight: bolder;
+	background-color: var(--color-orange); 	/* set the button to orange color */
+	color: var(--color-light); 	/* set the font of button to light color */
+	margin-top: var(--size-xs);	/* set the margin on top to not cover the text above when hover */
+	padding: var(--size-xs);/* set the button to be larger */
+	border-radius: 10px; /* set the button to have round corner */
+	box-shadow: 0 var(--size-2xs) 5px rgba(255,127,14,0.5); /* set the shadow to grow vertical and blur the shadow and decrease the opacity of the color to make it looks darker  */
+}
+
+.btn:hover{
+	background-color: var(--color-grey);	/* button will change into grey color when hover */
+	transform: translateY(-5px); 	/* button will move up when hover */
+}
+
+.btn a:hover{
+	color: var(--color-dark); 	/* to fix the text color in the button won't change when hover because it is hyperlinked */
+}
+
+.email{
+	text-decoration: none;
+	font-size: var(--size-sm);
+	text-transform: uppercase; 	/* let the text content to be all in uppercase */
+}
+
+#hero_container .btn{
+	margin-top: var(--size-nm);
+}
+
+#hero_container p{
+	margin-bottom: var(--size-sm);
+}
+
+#container1{
+	display: flex;
+	align-items: center;
+}
+
+#info_img{
+	max-width: 100%;	/* to let the info size when the tab is minimize */
+}
+
+.infodiv{
+	/* to have spacing between the info and picture */
+	margin-left: var(--size-3xl);
+}
+
+.caption{
+	margin-bottom: var(--size-nm); 	/* to have spacing with the paragraph */
+	text-align: center;
+	text-shadow: var(--size-2xs) var(--size-2xs)  black;
+}
+
+#skills_li{
+	text-align: center;
+	list-style-type: '\1F525';	/* to set the fire emoji as the list style */
+	list-style-position: inside; /* to include the list style together with the text */
+	margin-bottom: var(--size-xs);
+}
+
+.slideshow {
+	display: inline-block;	/* to let the images have inline effect so that it can have two images in one line */
+}
+.slideshow img{
+	width: 48%;	/* one line is 100% 48%+48%+margin = 100% */
+	height: var(--size-4xl);	/* unify the size of all images by setting same width and height for all pcitures */
+	object-fit: cover; 	/* fit the pictures in the new size  */
+	margin: var(--size-xs); 
+	transition: 0.3s;
+	border-radius: 3%;
+}
+
+.slideshow img:hover{
+	box-shadow: var(--size-2xs) var(--size-2xs) 10px var(--color-orange);
+	transform: scale(1.05);	/* make a pop effect by enlarging the size*/
+}
+
+footer{
+	margin-left:  var(--size-4xl); 
+	margin-right: var(--size-4xl);
+}
+
+#contact_ul{
+	margin-top: var(--size-2xl);
+	margin-bottom: var(--size-2xl);
+	display: flex;
+	justify-content:space-between; 	/* split them equally in the div */
+}
+
+#contact_li{
+	display: flex;
+	font-size: var(--size-lg);
+	padding: var(--size-nm);
+	border-radius:5%;
+	transition: 0.3s;
+}
+
+#contact_li a{
+	text-decoration: none;
+	color: var(--color-dark);
+}
+
+#contact_li:hover{
+	background-color: var(--color-light);
+	color: var(--color-dark);
+	cursor: pointer;
+}
+
+video{
+	width: var(--size-4xl);
+	border-radius: 10%;
+}
+
+.baristadiv{
+	margin-left: var(--size-xl);
+}
+
+#barista_p{
+	font-size: large;
+}

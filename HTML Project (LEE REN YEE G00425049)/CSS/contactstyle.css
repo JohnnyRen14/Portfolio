@@ -1,0 +1,95 @@
+	@charset "utf-8";
+/* CSS Document */
+/*  setting all color and size variables  */
+:root{
+	--color-light: #f5f7fa;
+	--color-dark: #171e23;
+	--color-orange: #ff7f0e;
+	--color-grey: #bdc3c7;
+	--size-2xs: 0.3rem;
+	--size-xs: 0.5rem;
+	--size-sm: 0.8rem;
+	--size-nm: 1rem;
+	--size-lg: 1.5rem;
+	--size-xl: 2rem;
+	--size-2xl: 4rem;
+	--size-3xl: 10rem;
+	--size-4xl: 12.5rem;
+}
+/* setting default margin and padding to 0 */
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Fredericka the Great';
+}
+body{
+	background-color: var(--color-dark);
+}
+main{
+	margin: var(--size-3xl); /* set margin for the content to be in center */
+}
+section{
+	display: flex; 	/* make the section into a flex box instead of inline*/
+	justify-content: center; /* set the form to be in the middle */
+}
+form{
+	background-color: var(--color-light); /* set the color of the form to white */
+	display: flex; 
+	align-items: center; /* align items in the middle */
+	flex-direction: column;	/* make it arrange vertical */
+	padding: var(--size-xl) 0; /* add top and bottom padding and let left and right padding untouch */
+	max-width: 100%; /* to make sure the form is showed as full form even tab being minimized */
+	border-radius: 25px; /* make the edge of the form round */
+	box-shadow: var(--color-grey) var(--size-xs) var(--size-xs) ; /* add a shadow for the form to looks like a 3D */
+	width: 25rem; 
+}
+form h1{
+	font-size: var(--size-xl); 	/* enlarge the text size */
+	text-shadow: var(--color-grey) var(--size-2xs) var(--size-2xs) 5px; /* put a shadow at the back of the caption */
+}
+form input, form textarea{
+	padding: var(--size-lg) var(--size-xl); /* increase the padding/area of the typing area  */
+	width: var(--size-4xl);	/* unify the width of typing area */
+	max-width: 60%;	/* to make the text area minimize when the tab is minimize */
+	border: 0;	/* clear the border  */
+	margin: var(--size-nm) ; /* add a margin between the typing area */
+	background-color: var(--color-grey);	/* set the color of the typing area to be the complementary color with the form  */
+	font-size: var(--size-nm);
+	color: var(--color-dark);	/* same idea with the background color */
+	border-radius: 5px;	/* make the corner of typing area curve */
+}
+.btn {
+	font-size: var(--size-nm);
+	font-weight: bolder;/* bold the text */
+	background-color: var(--color-orange); 	/* set the button to orange color */
+	color: var(--color-light); 	/* set the font of button to light color */
+	margin-top: var(--size-sm);	/* set the margin on top to not cover the text above when hover */
+	padding: var(--size-xs);/* set the button to be larger */
+	border-radius: 10px; /* set the button to have round corner */
+	width: var(--size-2xl); /*set the width of button to be smaller size*/
+	cursor: pointer; /* mouse will change to pointer when hover on top the button */
+	box-shadow: 0 var(--size-2xs) 5px rgba(255,127,14,0.5); /* set the shadow to grow vertical and blur the shadow and decrease the opacity of the color to make it looks darker  */
+}
+.btn:hover{
+	background-color: var(--color-grey);	/* button will change into grey color when hover */
+	transform: translateY(-5px);	/* button will move up when hover */
+	color: var(--color-dark); 	/* text color will change to dark as a complementary color with the button */
+}
+a {
+	text-decoration: none;
+	color: var(--color-light); 	/* set the font of button to light color */
+}
+.btn a:hover{
+	color: var(--color-dark); 	/* to fix the text color in the button won't change when hover because it is hyperlinked */
+}
+#back {
+	display: flex;/*	set into flexbox*/
+	justify-content: flex-end; /*	set the button to the right side*/
+	margin-right: var(--size-4xl);/*	make the button not too far away from the form*/
+}
+
+h2{
+	color: var(--color-light);
+	text-align: center;
+}
+
